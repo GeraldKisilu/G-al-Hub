@@ -1,0 +1,33 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, black, green); 
+}
+
+.intro {
+    height: 100vh; 
+    display: flex;
+    justify-content: flex-start; 
+    align-items: flex-start;
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    top: 20px;   
+    left: 20px;  
+    width: 60px;  /* Reduced size */
+    height: auto; 
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 450px; /* Add margin here to move the card lower */
+}
+
+.card-body {
+    text-align: center;
+}
