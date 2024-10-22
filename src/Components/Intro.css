@@ -1,4 +1,3 @@
-/* Reset and basic styles */
 html, body {
     height: 100%;
     margin: 0;
@@ -7,10 +6,9 @@ html, body {
     overflow: hidden; /* Ensure no scrollbars */
 }
 
-/* Intro container with green and black background */
 .intro {
-    width: 100vw;  /* Full viewport width */
-    height: 100vh; /* Full viewport height */
+    width: 100vw;  
+    height: 100vh; 
     background: linear-gradient(to bottom, green, black); /* Green on top, black on bottom */
     display: flex;
     justify-content: center;
@@ -20,7 +18,134 @@ html, body {
 
 /* Logo styling */
 .logo {
-    width: 300px;  /* Adjust the size of the logo */
-    height: auto;  /* Maintain the aspect ratio */
-    opacity: 1;    /* Full visibility */
+    width: 300px; 
+    height: auto;  
+    position: absolute;
+    top: 50%;  /* Initially center the logo vertically */
+    left: 50%; /* Center the logo horizontally */
+    transform: translate(-50%, -50%); /* Correct centering */
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out; /* Smooth transition */
+    z-index: 2; /* Ensure it stays on top */
 }
+
+/* Move the logo up when the introduction appears */
+.logo.move-up {
+    transform: translate(-50%, -350%); /* Moves the logo up */
+}
+
+.introduction-container {
+    height: 40%;
+    width: 90%; /* Increased width */
+    max-width: 750px; /* Increased max-width for larger screens */
+    background-image: url('../Components/Assets/field.jpg');
+    background-size:cover; 
+    background-position: center;
+    border-radius: 8px;
+    padding: 60px; /* Increased padding for more spacing inside the container */
+    margin-top: 120px; /* Adjusted margin to balance size change */
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.6); /* Slightly enhanced box-shadow */
+    position: relative;
+    z-index: 1; /* Ensure the container is behind the logo */
+    animation: fadeIn 1s ease-in-out forwards; /* Adds fade-in effect */
+    overflow: hidden; /* Ensures pseudo-element is contained within the container */
+}
+
+/* Pseudo-element for dimming effect */
+.introduction-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+    z-index: -1; /* Places it behind the content inside the container */
+    border-radius: 8px; /* Matches the border-radius of the container */
+}
+
+
+
+/* Welcome message styling */
+.welcome-message {
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    font-family: 'Times New Roman', serif; /* Times New Roman for the message */
+    background-color: rgba(0, 0, 0, 0.5); /* Adds a slight dim to the text background for better readability */
+    padding: 20px;
+    border-radius: 10px;
+    line-height: 1.5;
+}
+
+.welcome-message a {
+    color: yellow;
+    text-decoration: underline;
+}
+
+/* Typewriter effect */
+.typewriter {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid white;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 20px;
+    animation: typewriter 3s steps(40, end) 1s 1 normal both,
+               blinkTextCursor 500ms steps(40, end) infinite;
+}
+
+@keyframes typewriter {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blinkTextCursor {
+    from { border-right-color: white; }
+    to { border-right-color: transparent; }
+}
+
+/* Fade-in animation for the container */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Style the Continue button */
+.introduction-container button {
+    background-color: #1b5e20; /* Dark green */
+    color: white;
+    border: 2px solid #004d40; /* Darker green border */
+    padding: 10px 20px;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+    margin-top: 100px; /* Add margin to push the button lower */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    /* Attention-seeking effect after 3 seconds */
+    animation: pulse 1s ease-in-out 3s infinite; /* Starts after 3 seconds and repeats */
+}
+
+.introduction-container button:hover {
+    background-color: #004d40; /* Darker green on hover */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Keyframes for pulsing effect */
+@keyframes pulse {
+    0% {
+        transform: scale(1); /* Normal size */
+    }
+    50% {
+        transform: scale(1.1); /* Slightly larger */
+    }
+    100% {
+        transform: scale(1); /* Back to normal size */
+    }
+}
+
+
