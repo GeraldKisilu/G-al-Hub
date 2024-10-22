@@ -17,15 +17,15 @@ function Welcome() {
 
     return (
         <div className='welcome-container'>
+            <button className="back-button" onClick={() => navigate('/')}>↩</button>
             <div className="welcome-message">
                 <h1>Welcome to Goal Hub!</h1>
-                <p>We are excited to have you here. Let’s get started on your training journey!</p>
+                <p>We are excited to have you here. Let’s get started on your training journey and select the category of your preference!</p>
             </div>
             {/* Category selection buttons */}
             <div className="category-selection">
-                
                 <button onClick={() => handleCategorySelection('Kids')}>Kids</button>
-                <button onClick={() => handleCategorySelection('Adults')}>Adult</button>
+                <button onClick={() => handleCategorySelection('Adults')}>Adults</button>
             </div>
         </div>
     );

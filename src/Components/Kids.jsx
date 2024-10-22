@@ -1,8 +1,11 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate for navigation
 import './Kids.css'; // Import the CSS for styling
 import under18 from '../Components/Assets/under18.jpg'; // Adjust the path as needed
 
 function Kids() {
+    const navigate = useNavigate(); // Initialize useNavigate for navigation
+
     const trainingSchedule = [
         {
             time: '9:00 AM - 9:30 AM',
@@ -58,6 +61,7 @@ function Kids() {
 
     return (
         <div className="kids-container">
+            <button className="back-button" onClick={() => navigate('/welcome')}>↩</button>
             <div className="kids-content">
                 <h1>Kids Football Training</h1>
                 <p>Welcome to the Kids Training section! Here, we focus on developing essential football skills while having fun. Below is the training schedule for the weekend:</p>

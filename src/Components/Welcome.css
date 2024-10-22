@@ -89,3 +89,22 @@
     outline: none; /* Remove default outline */
     box-shadow: 0 0 5px rgba(255, 255, 255, 0.8); /* Add a focus outline */
 }
+
+.back-button {
+    background-color: #1b5e20; /* Dark green background */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 10px 15px; /* Padding for the button */
+    font-size: 18px; /* Font size */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    position: absolute; /* Position it at the top left */
+    top: 20px; /* Distance from the top */
+    left: 20px; /* Distance from the left */
+    z-index: 2; /* Ensure it is above other elements */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.back-button:hover {
+    background-color: #004d40; /* Darker green on hover */
+}
