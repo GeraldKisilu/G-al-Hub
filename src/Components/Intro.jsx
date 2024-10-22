@@ -33,11 +33,11 @@ function Intro() {
                     <div className="welcome-message">
                         <p className="typewriter">
                             Welcome to the <strong>Goal Hub</strong> training application! <br />
-                            This app will guide you through your training schedule, practice events, and activities. <br />
+                            This app will guide you through your training schedule, practice events,and activities. <br />
                             If you want to know more about <strong>Goal Hub</strong>, <a href="https://goalhub.co.ke/" target="_blank" rel="noopener noreferrer">click here</a> to explore more!
                         </p>
                     </div>
-                    <button onClick={() => window.location.href = '/welcome'}>
+                    <button onClick={handleContinue}>
                         Continue
                     </button>
                 </div>

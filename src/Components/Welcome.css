@@ -1,0 +1,67 @@
+/* Welcome container styling */
+.welcome-container {
+    height: 100vh; /* Full height of the viewport */
+    width: 100vw; /* Full width of the viewport */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    position: relative; /* Allow positioning of pseudo-elements */
+    overflow: hidden; /* Prevent overflow issues */
+    background-image: url('../Components/Assets/kids.jpg'); /* Set background image */
+    background-size: cover; /* Ensure the image covers the entire container */
+    background-position: center; /* Center the background image */
+}
+
+/* Dimmed overlay for background */
+.welcome-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay to dim the background */
+    z-index: 1; /* Place the overlay behind the text */
+}
+
+/* Welcome message styling */
+.welcome-message {
+    color: white; /* White text for contrast */
+    text-align: center; /* Center align text */
+    z-index: 2; /* Ensure text is above the overlay */
+    padding: 20px; /* Add padding for spacing */
+    max-width: 600px; /* Max width for the message container */
+}
+
+/* Header styling */
+.welcome-message h1 {
+    font-size: 36px; /* Larger font for the title */
+    margin: 0; /* Remove default margin */
+}
+
+/* Paragraph styling */
+.welcome-message p {
+    font-size: 20px; /* Set font size for the paragraph */
+    line-height: 1.5; /* Improve readability */
+}
+
+/* Category selection styling */
+.category-selection {
+    margin-top: 20px; /* Add some space above the buttons */
+}
+
+.category-selection button {
+    background-color: #1b5e20; /* Dark green background */
+    color: white; /* White text */
+    border: 2px solid #004d40; /* Darker green border */
+    padding: 10px 20px; /* Button padding */
+    font-size: 18px; /* Font size */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin: 0 10px; /* Spacing between buttons */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.category-selection button:hover {
+    background-color: #004d40; /* Darker green on hover */
+}
