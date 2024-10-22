@@ -157,4 +157,34 @@ html, body {
     }
 }
 
+/* Existing styles here... */
+
+/* Sidebar for social media icons */
+.social-bar {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    padding: 10px;
+    border-radius: 0 8px 8px 0; /* Rounded corners on the right side */
+    z-index: 10; /* Ensure it stays on top of other elements */
+}
+
+.social-bar a {
+    display: block;
+    margin-bottom: 20px; /* Spacing between icons */
+}
+
+.social-icon {
+    color: white;
+    font-size: 24px; /* Adjust the size of the icons */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: yellow; /* Change color on hover */
+    transform: scale(1.2); /* Slightly enlarge the icon on hover */
+}
+
 
