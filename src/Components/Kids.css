@@ -1,0 +1,71 @@
+/* Kids container styling */
+.kids-container {
+    height: 100vh; /* Full height of the viewport */
+    width: 100vw; /* Full width of the viewport */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    position: relative; /* Allow positioning of pseudo-elements */
+    overflow: hidden; /* Prevent overflow issues */
+    background-image: url('../Components/Assets/under18.jpg'); /* Set background image */
+    background-size: cover; /* Ensure the image covers the entire container */
+    background-position: center; /* Center the background image */
+}
+
+/* Kids content styling */
+.kids-content {
+    color: white; /* White text for contrast */
+    text-align: center; /* Center align text */
+    padding: 40px 20px; /* Add padding for spacing */
+    max-width: 800px; /* Max width for the content */
+    background-color: rgba(0, 0, 0, 0.7); /* Dark transparent background for readability */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    max-height: 80vh; /* Limit height of content */
+    overflow: auto; /* Enable scrolling when content exceeds max height */
+}
+
+/* Schedule styling */
+.schedule {
+    margin-top: 20px; /* Space above the schedule */
+    text-align: left; /* Left align schedule text */
+    max-height: 60vh; /* Set max height for the schedule */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* Session list styling */
+.session {
+    margin: 15px 0; /* Space between sessions */
+    padding: 10px; /* Padding for each session */
+    border: 2px solid #1b5e20; /* Border color */
+    border-radius: 10px; /* Rounded corners for sessions */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.session:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Light background on hover */
+}
+
+/* Header styling */
+.kids-content h1 {
+    font-size: 36px; /* Larger font for the title */
+    margin-bottom: 15px; /* Space below the title */
+}
+
+/* Schedule title styling */
+.schedule h2 {
+    font-size: 28px; /* Title size for schedule */
+    margin-bottom: 10px; /* Space below the schedule title */
+}
+
+/* Activity title styling */
+.session h3 {
+    font-size: 20px; /* Font size for activity titles */
+    margin: 0; /* Remove default margin */
+}
+
+/* Activity description styling */
+.session p {
+    font-size: 16px; /* Font size for descriptions */
+    margin: 5px 0 0; /* Space above the description */
+}

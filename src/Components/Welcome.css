@@ -3,8 +3,9 @@
     height: 100vh; /* Full height of the viewport */
     width: 100vw; /* Full width of the viewport */
     display: flex;
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
     position: relative; /* Allow positioning of pseudo-elements */
     overflow: hidden; /* Prevent overflow issues */
     background-image: url('../Components/Assets/kids.jpg'); /* Set background image */
@@ -29,39 +30,62 @@
     color: white; /* White text for contrast */
     text-align: center; /* Center align text */
     z-index: 2; /* Ensure text is above the overlay */
-    padding: 20px; /* Add padding for spacing */
+    padding: 40px 20px; /* Add padding for spacing */
     max-width: 600px; /* Max width for the message container */
+    background-color: rgba(0, 0, 0, 0.7); /* Slightly darker transparent background for better readability */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Deeper shadow effect for depth */
+    transition: transform 0.3s ease; /* Smooth scaling transition */
+}
+
+/* Scale the welcome message on hover */
+.welcome-message:hover {
+    transform: scale(1.02); /* Slightly enlarge on hover */
 }
 
 /* Header styling */
 .welcome-message h1 {
     font-size: 36px; /* Larger font for the title */
-    margin: 0; /* Remove default margin */
+    margin: 0 0 15px; /* Remove default margin and add space below */
+    font-family: 'Arial', sans-serif; /* Modern font family */
 }
 
 /* Paragraph styling */
 .welcome-message p {
     font-size: 20px; /* Set font size for the paragraph */
     line-height: 1.5; /* Improve readability */
+    margin: 0 0 20px; /* Add space below the paragraph */
 }
 
 /* Category selection styling */
 .category-selection {
-    margin-top: 20px; /* Add some space above the buttons */
+    margin-top: 30px; /* Increased space above the buttons */
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: center; /* Center buttons */
+    z-index: 2; /* Ensure buttons are above the overlay */
 }
 
 .category-selection button {
     background-color: #1b5e20; /* Dark green background */
     color: white; /* White text */
     border: 2px solid #004d40; /* Darker green border */
-    padding: 10px 20px; /* Button padding */
+    padding: 12px 25px; /* Increased button padding */
     font-size: 18px; /* Font size */
     border-radius: 5px; /* Rounded corners */
     cursor: pointer; /* Pointer cursor on hover */
     margin: 0 10px; /* Spacing between buttons */
-    transition: background-color 0.3s ease; /* Smooth transition */
+    transition: background-color 0.3s ease, transform 0.2s; /* Smooth transition and scale effect */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3); /* Add shadow to buttons for depth */
 }
 
+/* Button hover effect */
 .category-selection button:hover {
     background-color: #004d40; /* Darker green on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+/* Optional: Add focus styles for accessibility */
+.category-selection button:focus {
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.8); /* Add a focus outline */
 }

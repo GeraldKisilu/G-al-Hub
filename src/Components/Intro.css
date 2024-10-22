@@ -42,8 +42,8 @@ html, body {
     background-position: center;
     border-radius: 8px;
     padding: 80px; /* Increased padding for more spacing inside the container */
-    margin-top: 120px; /* Adjusted margin to balance size change */
-    box-shadow: 2px 4px 6px 10px rgba(45, 87, 50, 0.6); /* Slightly enhanced box-shadow */
+    margin-top: 90px; /* Adjusted margin to balance size change */
+    box-shadow: 2px 2px 6px 10px rgba(45, 87, 50, 0.6); /* Slightly enhanced box-shadow */
     position: relative;
     z-index: 1; /* Ensure the container is behind the logo */
     animation: fadeIn 1s ease-in-out forwards; /* Adds fade-in effect */
@@ -75,9 +75,9 @@ html, body {
     padding: 40px; /* Increased padding to give more space around the text */
     border-radius: 10px;
     line-height: 1.5;
-    margin: 20px auto; /* Center the message and provide space around it */
-    max-width: 90%; /* Prevent the message from being too wide */
-    display: inline-block; /* Ensures the background fits the content size */
+    margin: 30px auto; /* Center the message and provide space around it */
+    max-width: 100%; /* Prevent the message from being too wide */
+    display: flex; 
 }
 
 /* Link styling within the welcome message */
@@ -90,7 +90,7 @@ html, body {
 /* Typewriter effect */
 .typewriter {
     overflow: hidden; /* Ensures no overflow */
-    white-space: nowrap; /* Prevents wrapping */
+    /* white-space: nowrap; */
     border-right: 3px solid white; /* Typewriter cursor effect */
     width: 100%; /* Full width for the typewriter effect */
     margin: 0 auto;
@@ -130,17 +130,17 @@ html, body {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
-    margin-top: 100px; /* Add margin to push the button lower */
+    margin-top: 10px; /* Add margin to push the button lower */
     display: block;
     margin-left: auto;
     margin-right: auto;
 
     /* Attention-seeking effect after 3 seconds */
-    animation: pulse 1s ease-in-out 3s infinite; /* Starts after 3 seconds and repeats */
+    animation: pulse 1s ease-in-out 5s infinite; /* Starts after 3 seconds and repeats */
 }
 
 .introduction-container button:hover {
-    background-color: #004d40; /* Darker green on hover */
+    background-color: #21702b7a; /* Darker green on hover */
     transform: scale(1.05); /* Slight zoom effect on hover */
 }
 

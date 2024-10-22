@@ -20,12 +20,12 @@ function Welcome() {
             <div className="welcome-message">
                 <h1>Welcome to Goal Hub!</h1>
                 <p>We are excited to have you here. Let’s get started on your training journey!</p>
-
-                {/* Category selection buttons */}
-                <div className="category-selection">
-                    <button onClick={() => handleCategorySelection('Kids')}>Kids</button>
-                    <button onClick={() => handleCategorySelection('Adults')}>Adults</button>
-                </div>
+            </div>
+            {/* Category selection buttons */}
+            <div className="category-selection">
+                
+                <button onClick={() => handleCategorySelection('Kids')}>Kids</button>
+                <button onClick={() => handleCategorySelection('Adults')}>Adult</button>
             </div>
         </div>
     );
