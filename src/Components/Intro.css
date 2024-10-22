@@ -1,33 +1,26 @@
+/* Reset and basic styles */
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom, black, green); 
+    background: none;
+    overflow: hidden; /* Ensure no scrollbars */
 }
 
+/* Intro container with green and black background */
 .intro {
-    height: 100vh; 
+    width: 100vw;  /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    background: linear-gradient(to bottom, green, black); /* Green on top, black on bottom */
     display: flex;
-    justify-content: flex-start; 
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     position: relative;
 }
 
+/* Logo styling */
 .logo {
-    position: absolute;
-    top: 20px;   
-    left: 20px;  
-    width: 60px;  /* Reduced size */
-    height: auto; 
-}
-
-.card {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 450px; /* Add margin here to move the card lower */
-}
-
-.card-body {
-    text-align: center;
+    width: 300px;  /* Adjust the size of the logo */
+    height: auto;  /* Maintain the aspect ratio */
+    opacity: 1;    /* Full visibility */
 }
