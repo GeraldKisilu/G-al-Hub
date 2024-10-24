@@ -3,7 +3,7 @@ html, body {
     margin: 0;
     padding: 0;
     background: none;
-    overflow: hidden; /* Ensure no scrollbars */
+    overflow-y: auto; 
 }
 
 .intro {
@@ -194,7 +194,7 @@ html, body {
     justify-content: space-around; /* Space between cards */
     align-items: flex-end; /* Align cards to the bottom */
     position: absolute; /* Positioning at the bottom */
-    bottom: 20px; /* Distance from the bottom */
+    bottom: -250px; /* Distance from the bottom */
     left: 50%; /* Center horizontally */
     transform: translateX(-50%); /* Adjust position to center */
     width: 90%; /* Width of the container */

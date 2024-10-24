@@ -7,6 +7,7 @@ import './Intro.css';
 
 function Intro() {
     const [showIntroduction, setShowIntroduction] = useState(false);
+    const [cardsVisible, setCardsVisible] = useState(false);
     const navigate = useNavigate(); // Initialize useNavigate for redirection
 
     useEffect(() => {
@@ -15,6 +16,27 @@ function Intro() {
         }, 1000); // Show introduction after 1 second
 
         return () => clearTimeout(timer);
+    }, []);
+
+    // Scroll effect to show cards once the user scrolls
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollPosition = window.scrollY;
+            const windowHeight = window.innerHeight;
+            const introContainer = document.querySelector('.introduction-container');
+            const introBottom = introContainer.getBoundingClientRect().bottom;
+
+            // When scrolling past the intro container, cards become visible
+            if (scrollPosition > introBottom - windowHeight / 2) {
+                setCardsVisible(true);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
     }, []);
 
     const handleContinue = () => {
@@ -58,7 +80,7 @@ function Intro() {
             )}
 
             {/* Cards section */}
-            <div className="cards-container">
+            <div className={`cards-container ${cardsVisible ? 'cards-visible' : ''}`}>
                 {['Gym', 'Cafe', 'Track', 'Pitch', 'Sponsorships'].map((cardName) => (
                     <div key={cardName} className="card">
                         <img src={pitchImage} alt={`${cardName}`} className="card-image" />
