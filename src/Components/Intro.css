@@ -188,3 +188,75 @@ html, body {
 }
 
 
+/* Cards container */
+.cards-container {
+    display: flex;
+    justify-content: space-around; /* Space between cards */
+    align-items: flex-end; /* Align cards to the bottom */
+    position: absolute; /* Positioning at the bottom */
+    bottom: 20px; /* Distance from the bottom */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust position to center */
+    width: 90%; /* Width of the container */
+    max-width: 1200px; /* Maximum width for larger screens */
+    padding: 20px 0; /* Padding for top and bottom */
+}
+
+/* Individual card styling */
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 180px; /* Adjusted width for better spacing */
+    margin: 0 10px; /* Margin for spacing between cards */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Card hover effect */
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Card image */
+.card-image {
+    width: 100%;
+    height: 120px; /* Fixed height for images */
+    object-fit: cover; /* Ensures the image covers the entire area without stretching */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+/* Card content */
+.card-content {
+    padding: 15px;
+    color: black;
+}
+
+/* Card title */
+.card-content h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #1b5e20; /* Green color for the title */
+}
+
+/* View button styling */
+.view-button {
+    background-color: #1b5e20;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* View button hover effect */
+.view-button:hover {
+    background-color: #004d40;
+    transform: scale(1.05);
+}

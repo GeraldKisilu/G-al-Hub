@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate from React Router
 import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa'; // Import social media icons
 import logo from '../Components/Assets/Goalhublogo.png';
+import pitchImage from '../Components/Assets/pitch.avif'; // Assuming you have the pitch image
 import './Intro.css';
 
 function Intro() {
@@ -55,6 +56,19 @@ function Intro() {
                     </button>
                 </div>
             )}
+
+            {/* Cards section */}
+            <div className="cards-container">
+                {['Gym', 'Cafe', 'Track', 'Pitch', 'Sponsorships'].map((cardName) => (
+                    <div key={cardName} className="card">
+                        <img src={pitchImage} alt={`${cardName}`} className="card-image" />
+                        <div className="card-content">
+                            <h3>{cardName}</h3>
+                            <button className="view-button">View</button>
+                        </div>
+                    </div>
+                ))}
+            </div>
         </div>
     );
 }
