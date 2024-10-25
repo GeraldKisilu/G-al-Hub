@@ -9,7 +9,7 @@ html, body {
 .intro {
     width: 100vw;  
     height: 100vh; 
-    background: linear-gradient(to bottom, green, black); /* Green on top, black on bottom */
+    background: linear-gradient(to bottom, green, black);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,36 +21,35 @@ html, body {
     width: 300px; 
     height: auto;  
     position: absolute;
-    top: 50%;  /* Initially center the logo vertically */
-    left: 50%; /* Center the logo horizontally */
-    transform: translate(-50%, -50%); /* Correct centering */
-    transition: transform 1s ease-in-out, opacity 1s ease-in-out; /* Smooth transition */
-    z-index: 2; /* Ensure it stays on top */
+    top: 50%;  
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out; 
+    z-index: 2; 
 }
 
-/* Move the logo up when the introduction appears */
 .logo.move-up {
-    transform: translate(-50%, -350%); /* Moves the logo up */
+    transform: translate(-50%, -350%); 
 }
 
 .introduction-container {
     height: 40%;
-    width: 90%; /* Increased width */
-    max-width: 750px; /* Increased max-width for larger screens */
+    width: 90%;
+    max-width: 750px; 
     background-image: url('../Components/Assets/field.jpg');
-    background-size:cover; 
+    background-size: cover; 
     background-position: center;
     border-radius: 8px;
-    padding: 80px; /* Increased padding for more spacing inside the container */
-    margin-top: 90px; /* Adjusted margin to balance size change */
-    box-shadow: 2px 2px 6px 10px rgba(45, 87, 50, 0.6); /* Slightly enhanced box-shadow */
+    padding: 80px; 
+    margin-top: 90px; 
+    box-shadow: 2px 2px 6px 10px rgba(45, 87, 50, 0.6); 
     position: relative;
-    z-index: 1; /* Ensure the container is behind the logo */
-    animation: fadeIn 1s ease-in-out forwards; /* Adds fade-in effect */
+    z-index: 1; 
+    animation: fadeIn 1s ease-in-out forwards; 
     overflow: hidden;
 }
 
-/* Pseudo-element for dimming effect */
+/* Dimmed background effect */
 .introduction-container::before {
     content: "";
     position: absolute;
@@ -58,25 +57,23 @@ html, body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
-    z-index: -1; /* Places it behind the content inside the container */
-    border-radius: 8px; /* Matches the border-radius of the container */
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: -1; 
+    border-radius: 8px; 
 }
-
-
 
 /* Welcome message styling */
 .welcome-message {
     color: white;
-    font-size: 20px; /* Adjusted font size for better readability */
+    font-size: 20px; 
     text-align: center;
-    font-family: 'Times New Roman', serif; /* Times New Roman for the message */
+    font-family: 'Times New Roman', serif; 
     background-color: rgba(0, 0, 0, 0.7); 
-    padding: 40px; /* Increased padding to give more space around the text */
+    padding: 40px; 
     border-radius: 10px;
     line-height: 1.5;
-    margin: 30px auto; /* Center the message and provide space around it */
-    max-width: 100%; /* Prevent the message from being too wide */
+    margin: 30px auto; 
+    max-width: 100%; 
     display: flex; 
 }
 
@@ -84,21 +81,19 @@ html, body {
 .welcome-message a {
     color: yellow;
     text-decoration: underline;
-    font-weight: bold; /* Make the link stand out */
+    font-weight: bold; 
 }
 
 /* Typewriter effect */
 .typewriter {
-    overflow: hidden; /* Ensures no overflow */
-    /* white-space: nowrap; */
-    border-right: 3px solid white; /* Typewriter cursor effect */
-    width: 100%; /* Full width for the typewriter effect */
+    overflow: hidden; 
+    border-right: 3px solid white; 
+    width: 100%; 
     margin: 0 auto;
     font-size: 20px;
     animation: typewriter 3s steps(40, end) 1s 1 normal both,
-               blinkTextCursor 500ms steps(40, end) infinite; /* Adds blinking effect */
+               blinkTextCursor 500ms steps(40, end) infinite; 
 }
-
 
 /* Keyframes for typewriter effect */
 @keyframes typewriter {
@@ -112,31 +107,26 @@ html, body {
     to { border-right-color: transparent; }
 }
 
-
 /* Fade-in animation for the container */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Style the Continue button */
+/* Continue button styling */
 .introduction-container button {
-    background-color: #1b5e20; /* Dark green */
+    background-color: #1b5e20; 
     color: white;
-    border: 2px solid #004d40; /* Darker green border */
+    border: 2px solid #004d40; 
     padding: 10px 20px;
     font-size: 18px;
     font-family: 'Times New Roman', Times, serif;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
-    margin-top: 10px; /* Add margin to push the button lower */
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+    margin: 10px auto; 
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-
-    /* Attention-seeking effect after 3 seconds */
-    animation: pulse 1s ease-in-out 5s infinite; /* Starts after 3 seconds and repeats */
+    animation: pulse 1s ease-in-out 5s infinite; 
 }
 
 .introduction-container button:hover {
@@ -146,18 +136,10 @@ html, body {
 
 /* Keyframes for pulsing effect */
 @keyframes pulse {
-    0% {
-        transform: scale(1); /* Normal size */
-    }
-    50% {
-        transform: scale(1.1); /* Slightly larger */
-    }
-    100% {
-        transform: scale(1); /* Back to normal size */
-    }
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
 }
-
-/* Existing styles here... */
 
 /* Sidebar for social media icons */
 .social-bar {
@@ -165,20 +147,20 @@ html, body {
     top: 50%;
     left: 0;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    background-color: rgba(0, 0, 0, 0.8); 
     padding: 10px;
-    border-radius: 0 8px 8px 0; /* Rounded corners on the right side */
-    z-index: 10; /* Ensure it stays on top of other elements */
+    border-radius: 0 8px 8px 0; 
+    z-index: 10; 
 }
 
 .social-bar a {
     display: block;
-    margin-bottom: 20px; /* Spacing between icons */
+    margin-bottom: 20px; 
 }
 
 .social-icon {
     color: white;
-    font-size: 24px; /* Adjust the size of the icons */
+    font-size: 24px; 
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
@@ -186,7 +168,6 @@ html, body {
     color: yellow; 
     transform: scale(1.2); 
 }
-
 
 /* Cards container */
 .cards-container {
@@ -215,7 +196,6 @@ html, body {
     overflow: hidden;
 }
 
-/* Card hover effect */
 .card:hover {
     transform: scale(1.05);
     box-shadow: 3px 3px 4px 8px rgba(0, 128, 0, 0.616);
@@ -224,8 +204,8 @@ html, body {
 /* Card image */
 .card-image {
     width: 100%;
-    height: 120px; /* Fixed height for images */
-    object-fit: cover; /* Ensures the image covers the entire area without stretching */
+    height: 120px; 
+    object-fit: cover; 
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
 }
@@ -240,7 +220,7 @@ html, body {
 .card-content h3 {
     font-size: 18px;
     margin-bottom: 10px;
-    color: #1b5e20; /* Green color for the title */
+    color: #1b5e20; 
 }
 
 /* View button styling */
@@ -255,8 +235,78 @@ html, body {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-/* View button hover effect */
 .view-button:hover {
     background-color: #004d40;
     transform: scale(1.05);
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #004d40;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Times New Roman', serif;
+    margin-top: 50px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.billing-info,
+.activities,
+.contact-info {
+    width: 30%;
+    min-width: 200px;
+}
+
+.billing-info p, 
+.activities ul, 
+.contact-info p {
+    margin: 10px 0;
+}
+
+.mpesa-logo {
+    width: 50px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.activities ul {
+    list-style: none;
+    padding: 0;
+}
+
+.activities ul li {
+    margin: 5px 0;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer-logo {
+    width: 30px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.footer a {
+    color: yellow;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer p {
+    margin: 5px 0;
 }

@@ -47,10 +47,10 @@ function Intro() {
         <div className='intro'>
             {/* Sidebar for social media icons */}
             <div className="social-bar">
-                <a href="https://facebook.com/goalhub" target="_blank" rel="noopener noreferrer">
+                <a href="https://facebook.com/goalhub_254" target="_blank" rel="noopener noreferrer">
                     <FaFacebookF className="social-icon" />
                 </a>
-                <a href="https://twitter.com/goalhub" target="_blank" rel="noopener noreferrer">
+                <a href="https://twitter.com/goalhub_254" target="_blank" rel="noopener noreferrer">
                     <FaTwitter className="social-icon" />
                 </a>
                 <a href="https://www.instagram.com/goalhub_254/" target="_blank" rel="noopener noreferrer">
@@ -90,7 +90,38 @@ function Intro() {
                         </div>
                     </div>
                 ))}
-            </div>
+            </div> 
+
+            {/* Footer Section */}
+            <footer className="footer">
+                <div className="footer-content">
+                    <div className="billing-info">
+                        <img src="/path-to-mpesa-logo" alt="Mpesa Logo" className="mpesa-logo" />
+                        <p><strong>Location:</strong> Acacia Feeder - Namanga Road Intersection</p>
+                        <p><strong>Time:</strong> Daily from 6:00 AM to 11:00 PM</p>
+                    </div>
+                    <div className="activities">
+                        <strong>Activities:</strong>
+                        <ul>
+                            <li>Floodlights</li>
+                            <li>Astroturf Pitches</li>
+                            <li>Court Sports</li>
+                            <li>Football Academy</li>
+                            <li>Walking and Running Track</li>
+                        </ul>
+                    </div>
+                    <div className="contact-info">
+                        <p><strong>Call Us:</strong> +254 740 266 811</p>
+                        <p><strong>Email:</strong> <a href="mailto:info@goalhub.co.ke">info@goalhub.co.ke</a></p>
+                        <p><strong>Website:</strong> <a href="https://www.goalhub.co.ke">www.goalhub.co.ke</a></p>
+                        <p><strong>Instagram:</strong> <a href="https://www.instagram.com/goalhub_254/">@goalhubke</a></p>
+                    </div>
+                </div>
+                <div className="footer-bottom">
+                    <img src="/path-to-small-goalhub-logo" alt="Goalhub Logo" className="footer-logo" />
+                    <p>&copy; 2024 Gerald Kisilu</p>
+                </div>
+            </footer>
         </div>
     );
 }
