@@ -93,7 +93,7 @@ function Intro() {
             </div> 
 
             {/* Footer Section */}
-            <footer className="footer">
+            {/* <footer className="footer">
                 <div className="footer-content">
                     <div className="billing-info">
                         <img src="/path-to-mpesa-logo" alt="Mpesa Logo" className="mpesa-logo" />
@@ -121,7 +121,7 @@ function Intro() {
                     <img src="/path-to-small-goalhub-logo" alt="Goalhub Logo" className="footer-logo" />
                     <p>&copy; 2024 Gerald Kisilu</p>
                 </div>
-            </footer>
+            </footer> */}
         </div>
     );
 }

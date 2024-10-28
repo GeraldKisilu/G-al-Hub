@@ -1,0 +1,75 @@
+/* src/Components/Adults.css */
+.adults-container {
+    background: linear-gradient(145deg, black, green);
+    color: white;
+    min-height: 100vh;
+    width: 100vw;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .schedule {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 900px;
+    width: 100%;
+    color: #e0e0e0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+  }
+  
+  h2 {
+    color: #90ee90;
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  ul li {
+    background: #006400;
+    margin: 15px 0;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    color: white;
+  }
+  
+  .coming-soon {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #d1d1d1;
+    font-style: italic;
+  }
+  
+  /* Back Button Styling */
+  .back-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: green;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .back-button:hover {
+    background-color: #004d00;
+  }
+  
