@@ -77,41 +77,6 @@ html, body {
     display: flex; 
 }
 
-/* Link styling within the welcome message */
-.welcome-message a {
-    color: yellow;
-    text-decoration: underline;
-    font-weight: bold; 
-}
-
-/* Typewriter effect */
-.typewriter {
-    overflow: hidden; 
-    border-right: 3px solid white; 
-    width: 100%; 
-    margin: 0 auto;
-    font-size: 20px;
-    animation: typewriter 3s steps(40, end) 1s 1 normal both,
-               blinkTextCursor 500ms steps(40, end) infinite; 
-}
-
-/* Keyframes for typewriter effect */
-@keyframes typewriter {
-    from { width: 0; }
-    to { width: 120%; }
-}
-
-/* Blinking cursor effect */
-@keyframes blinkTextCursor {
-    from { border-right-color: white; }
-    to { border-right-color: transparent; }
-}
-
-/* Fade-in animation for the container */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
 
 /* Continue button styling */
 .introduction-container button {
@@ -124,7 +89,7 @@ html, body {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease; 
-    margin: 10px auto; 
+    margin: 180px auto; 
     display: block;
     animation: pulse 1s ease-in-out 5s infinite; 
 }
@@ -310,3 +275,5 @@ html, body {
 .footer p {
     margin: 5px 0;
 } */
+
+

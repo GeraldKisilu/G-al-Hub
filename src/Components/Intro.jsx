@@ -1,24 +1,23 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate from React Router
-import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa'; // Import social media icons
+import { useNavigate } from 'react-router-dom';
+import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
 import logo from '../Components/Assets/Goalhublogo.png';
-import pitchImage from '../Components/Assets/pitch.avif'; // Assuming you have the pitch image
+import pitchImage from '../Components/Assets/pitch.avif';
 import './Intro.css';
 
 function Intro() {
     const [showIntroduction, setShowIntroduction] = useState(false);
     const [cardsVisible, setCardsVisible] = useState(false);
-    const navigate = useNavigate(); // Initialize useNavigate for redirection
+    const navigate = useNavigate();
 
     useEffect(() => {
         const timer = setTimeout(() => {
             setShowIntroduction(true);
-        }, 1000); // Show introduction after 1 second
+        }, 1000);
 
         return () => clearTimeout(timer);
     }, []);
 
-    // Scroll effect to show cards once the user scrolls
     useEffect(() => {
         const handleScroll = () => {
             const scrollPosition = window.scrollY;
@@ -26,7 +25,6 @@ function Intro() {
             const introContainer = document.querySelector('.introduction-container');
             const introBottom = introContainer.getBoundingClientRect().bottom;
 
-            // When scrolling past the intro container, cards become visible
             if (scrollPosition > introBottom - windowHeight / 2) {
                 setCardsVisible(true);
             }
@@ -40,12 +38,11 @@ function Intro() {
     }, []);
 
     const handleContinue = () => {
-        navigate('/welcome'); // Redirect to Welcome.jsx
+        navigate('/welcome');
     };
 
     return (
         <div className='intro'>
-            {/* Sidebar for social media icons */}
             <div className="social-bar">
                 <a href="https://facebook.com/goalhub_254" target="_blank" rel="noopener noreferrer">
                     <FaFacebookF className="social-icon" />
@@ -67,11 +64,7 @@ function Intro() {
             {showIntroduction && (
                 <div className="introduction-container">
                     <div className="welcome-message">
-                        <p className="typewriter">
-                            Welcome to the <strong>Goal Hub</strong> training application! <br />
-                            This app will guide you through your training schedule, practice events, and activities. <br />
-                            If you want to know more about <strong>Goal Hub</strong>, <a href="https://goalhub.co.ke/" target="_blank" rel="noopener noreferrer">click here</a> to explore more!
-                        </p>
+                        
                     </div>
                     <button onClick={handleContinue}>
                         Continue
@@ -79,9 +72,8 @@ function Intro() {
                 </div>
             )}
 
-            {/* Cards section */}
             <div className={`cards-container ${cardsVisible ? 'cards-visible' : ''}`}>
-                {['Gym', 'Cafe', 'Track', 'Pitch', 'Sponsorships'].map((cardName) => (
+                {['Carpetcare', 'Cafe', 'Track', 'Playgrounds'].map((cardName) => (
                     <div key={cardName} className="card">
                         <img src={pitchImage} alt={`${cardName}`} className="card-image" />
                         <div className="card-content">
@@ -90,7 +82,7 @@ function Intro() {
                         </div>
                     </div>
                 ))}
-            </div> 
+            </div>
 
             {/* Footer Section */}
             {/* <footer className="footer">
@@ -127,3 +119,5 @@ function Intro() {
 }
 
 export default Intro;
+
+
