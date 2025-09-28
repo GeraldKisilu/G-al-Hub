@@ -14,6 +14,108 @@ html, body {
     justify-content: center;
     align-items: center;
     position: relative;
+    flex-direction: column;
+}
+
+/* 🌟 Emoji Background Wallpaper */
+.emoji-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.emoji-bg span {
+  position: absolute;
+  font-size: 2.2rem;
+  color: black; 
+  opacity: 0.15;
+  animation: floatEmojis 18s ease-in-out infinite;
+}
+
+/* Many emojis positioned */
+/* Many emojis positioned - denser grid */
+.emoji-bg span:nth-child(1)  { top: 5%;  left: 5%;   animation-delay: 0s; }
+.emoji-bg span:nth-child(2)  { top: 10%; left: 20%;  animation-delay: 1s; }
+.emoji-bg span:nth-child(3)  { top: 15%; left: 40%;  animation-delay: 2s; }
+.emoji-bg span:nth-child(4)  { top: 20%; left: 60%;  animation-delay: 3s; }
+.emoji-bg span:nth-child(5)  { top: 25%; left: 80%;  animation-delay: 4s; }
+.emoji-bg span:nth-child(6)  { top: 30%; left: 10%;  animation-delay: 5s; }
+.emoji-bg span:nth-child(7)  { top: 35%; left: 35%;  animation-delay: 6s; }
+.emoji-bg span:nth-child(8)  { top: 40%; left: 55%;  animation-delay: 7s; }
+.emoji-bg span:nth-child(9)  { top: 45%; left: 75%;  animation-delay: 8s; }
+.emoji-bg span:nth-child(10) { top: 50%; left: 15%;  animation-delay: 9s; }
+.emoji-bg span:nth-child(11) { top: 55%; left: 45%;  animation-delay: 10s; }
+.emoji-bg span:nth-child(12) { top: 60%; left: 65%;  animation-delay: 11s; }
+.emoji-bg span:nth-child(13) { top: 65%; left: 85%;  animation-delay: 12s; }
+.emoji-bg span:nth-child(14) { top: 70%; left: 25%;  animation-delay: 13s; }
+.emoji-bg span:nth-child(15) { top: 75%; left: 50%;  animation-delay: 14s; }
+.emoji-bg span:nth-child(16) { top: 80%; left: 70%;  animation-delay: 15s; }
+.emoji-bg span:nth-child(17) { top: 85%; left: 90%;  animation-delay: 16s; }
+.emoji-bg span:nth-child(18) { top: 90%; left: 30%;  animation-delay: 17s; }
+.emoji-bg span:nth-child(19) { top: 95%; left: 55%;  animation-delay: 18s; }
+.emoji-bg span:nth-child(20) { top: 98%; left: 10%;  animation-delay: 19s; }
+
+
+@keyframes floatEmojis {
+  0%   { transform: translateY(0) rotate(0deg); opacity: 0.15; }
+  50%  { transform: translateY(-15px) rotate(180deg); opacity: 0.2; }
+  100% { transform: translateY(0) rotate(360deg); opacity: 0.15; }
+}
+
+/* ✅ Navbar Styling */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 95%;
+    background: rgba(0, 0, 0, 0.46);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 40px;
+    z-index: 20;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Times New Roman', serif;
+    font-size: 22px;
+    color: white;
+    font-weight: bold;
+}
+
+.navbar-logo img {
+    width: 50px;
+    height: auto;
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+
+}
+
+.navbar-links li a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Times New Roman', serif;
+    font-size: 18px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-links li a:hover {
+    color: yellow;
+    transform: scale(1.1);
 }
 
 /* Logo styling */
@@ -32,71 +134,106 @@ html, body {
     transform: translate(-50%, -350%); 
 }
 
+/* Container */
 .introduction-container {
-    height: 40%;
-    width: 90%;
-    max-width: 750px; 
-    background-image: url('../Components/Assets/field.jpg');
-    background-size: cover; 
-    background-position: center;
-    border-radius: 8px;
-    padding: 80px; 
-    margin-top: 90px; 
-    box-shadow: 2px 2px 6px 10px rgba(45, 87, 50, 0.6); 
-    position: relative;
-    z-index: 1; 
-    animation: fadeIn 1s ease-in-out forwards; 
-    overflow: hidden;
+  position: relative;
+  height: 65vh;
+  width: 90%;
+  max-width: 900px;
+  margin: 80px auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
 }
 
-/* Dimmed background effect */
-.introduction-container::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); 
-    z-index: -1; 
-    border-radius: 8px; 
+/* Slideshow setup */
+.slideshow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
-/* Welcome message styling */
-.welcome-message {
-    color: white;
-    font-size: 20px; 
-    text-align: center;
-    font-family: 'Times New Roman', serif; 
-    background-color: rgba(0, 0, 0, 0.7); 
-    padding: 40px; 
-    border-radius: 10px;
-    line-height: 1.5;
-    margin: 30px auto; 
-    max-width: 100%; 
-    display: flex; 
+.slides {
+  display:flex;
+  width: 100%;
+  height: 100%;
+  animation: slideShow 25s infinite;
+}
+
+.slide {
+  flex: 1 0 100%;
+  position: relative;
+}
+
+.slide img {
+  width:100%;
+  height: 100%;
+  object-fit: center;
+}
+
+/* Slideshow animation */
+@keyframes slideShow {
+  0%, 15% { transform: translateX(0%); }
+  20%, 35% { transform: translateX(-100%); }
+  40%, 55% { transform: translateX(-200%); }
+  60%, 75% { transform: translateX(-300%); }
+  80%, 100% { transform: translateX(-400%); }
+}
+
+/* Overlay with final text */
+.intro-overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: white;
+  font-family: 'Times New Roman', serif;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px 30px;
+  border-radius: 8px;
+  animation: fadeInOverlay 2s ease-in-out 20s forwards;
+  opacity: 0;
+}
+
+.intro-overlay h2 {
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+@keyframes fadeInOverlay {
+  from { opacity: 0; transform: translate(-50%, 30px); }
+  to { opacity: 1; transform: translate(-50%, 0); }
+}
+
+/* Continue button */
+.continue-btn {
+  background: #1b5e20;
+  color: white;
+  padding: 10px 25px;
+  font-size: 18px;
+  border: 2px solid #004d40;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Times New Roman', serif;
+}
+
+.continue-btn:hover {
+  background: #21702b;
+  transform: scale(1.1);
 }
 
 
-/* Continue button styling */
-.introduction-container button {
-    background-color: #1b5e20; 
-    color: white;
-    border: 2px solid #004d40; 
-    padding: 10px 20px;
-    font-size: 18px;
-    font-family: 'Times New Roman', Times, serif;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease; 
-    margin: 180px auto; 
-    display: block;
-    animation: pulse 1s ease-in-out 5s infinite; 
-}
-
-.introduction-container button:hover {
-    background-color: #21702b7a; 
-    transform: scale(1.05); 
+/* FadeIn animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* Keyframes for pulsing effect */
@@ -204,76 +341,5 @@ html, body {
     background-color: #004d40;
     transform: scale(1.05);
 }
-
-/* Footer Styling */
-/* .footer {
-    background-color: #004d40;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    font-family: 'Times New Roman', serif;
-    margin-top: 50px;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-}
-
-.billing-info,
-.activities,
-.contact-info {
-    width: 30%;
-    min-width: 200px;
-}
-
-.billing-info p, 
-.activities ul, 
-.contact-info p {
-    margin: 10px 0;
-}
-
-.mpesa-logo {
-    width: 50px;
-    height: auto;
-    margin-bottom: 10px;
-}
-
-.activities ul {
-    list-style: none;
-    padding: 0;
-}
-
-.activities ul li {
-    margin: 5px 0;
-}
-
-.footer-bottom {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.footer-logo {
-    width: 30px;
-    height: auto;
-    margin-bottom: 10px;
-}
-
-.footer a {
-    color: yellow;
-    text-decoration: none;
-}
-
-.footer a:hover {
-    text-decoration: underline;
-}
-
-.footer p {
-    margin: 5px 0;
-} */
 
 
