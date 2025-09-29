@@ -1,0 +1,105 @@
+.carpetcare {
+  width: 100vw;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, green, black);
+  color: white;
+  font-family: 'Times New Roman', serif;
+  position: relative;
+  padding-top: 80px;
+}
+
+/* Container */
+.carpetcare-container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.carpetcare-container h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.carpetcare-container p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+/* Services */
+.service-section {
+  display: flex;
+  justify-content: space-around;
+  margin: 40px 0;
+  flex-wrap: wrap;
+}
+
+.service-card {
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
+  padding: 20px;
+  width: 250px;
+  margin: 10px;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+  background: rgba(255,255,255,0.2);
+}
+
+/* Payment */
+.payment-section {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.payment-section ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+.payment-section li {
+  margin: 8px 0;
+  font-size: 18px;
+}
+
+/* Feedback form */
+.feedback-section {
+  margin: 40px auto;
+  text-align: center;
+}
+
+.feedback-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: auto;
+}
+
+.feedback-section input,
+.feedback-section select,
+.feedback-section textarea {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  font-size: 16px;
+}
+
+.feedback-section button {
+  background: #1b5e20;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.feedback-section button:hover {
+  background: #21702b;
+  transform: scale(1.05);
+}

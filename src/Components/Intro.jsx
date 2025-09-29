@@ -12,7 +12,6 @@ import "./Intro.css";
 
 function Intro() {
   const [showIntroduction, setShowIntroduction] = useState(false);
-  const [showFinalMessage, setShowFinalMessage] = useState(false);
   const [cardsVisible, setCardsVisible] = useState(false);
   const navigate = useNavigate();
 
@@ -23,16 +22,6 @@ function Intro() {
     }, 1000);
     return () => clearTimeout(timer);
   }, []);
-
-  // After slideshow, show final message
-  useEffect(() => {
-    if (showIntroduction) {
-      const timer = setTimeout(() => {
-        setShowFinalMessage(true);
-      }, 15000); // match slideshow duration
-      return () => clearTimeout(timer);
-    }
-  }, [showIntroduction]);
 
   // Show cards on scroll
   useEffect(() => {
@@ -54,6 +43,15 @@ function Intro() {
 
   const handleContinue = () => {
     navigate("/welcome");
+  };
+
+  // ✅ Define card routes
+  const cardRoutes = {
+    Carpetcare: "/carpetcare",
+    Cafe: "/cafe",
+    Track: "/track",
+    Turfs: "/turfs",
+    "Pool Table": "/pooltable",
   };
 
   return (
@@ -85,7 +83,7 @@ function Intro() {
         </div>
         <ul className="navbar-links">
           <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
+          <li><a href="about">About</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -124,7 +122,7 @@ function Intro() {
             </div>
           </div>
 
-          {/* Overlay text after slideshow */}
+          {/* Overlay text */}
           <div className="intro-overlay">
             <h2>GoalHub Training and Fitness Centre</h2>
             <button onClick={handleContinue} className="continue-btn">
@@ -136,12 +134,17 @@ function Intro() {
 
       {/* ✅ Cards Section */}
       <div className={`cards-container ${cardsVisible ? "cards-visible" : ""}`}>
-        {["Carpetcare", "Cafe", "Track", "Turfs", "Pool Table"].map((cardName) => (
+        {Object.keys(cardRoutes).map((cardName) => (
           <div key={cardName} className="card">
             <img src={pitchImage} alt={cardName} className="card-image" />
             <div className="card-content">
               <h3>{cardName}</h3>
-              <button className="view-button">View</button>
+              <button
+                className="view-button"
+                onClick={() => navigate(cardRoutes[cardName])}
+              >
+                View
+              </button>
             </div>
           </div>
         ))}

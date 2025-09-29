@@ -4,6 +4,8 @@ import Intro from './Components/Intro';
 import Welcome from './Components/Welcome';
 import Kids from './Components/Kids';
 import Adults from './Components/Adults';
+import Carpetcare from './Components/Carpetcare';
+import About from './Components/About';
 import './App.css';
 
 function App() {
@@ -14,6 +16,8 @@ function App() {
         <Route path="/welcome" element={<Welcome />} />
         <Route path="/kids" element={<Kids />} />
         <Route path="/adults" element={<Adults />} />
+        <Route path="/carpetcare" element={<Carpetcare />} />
+        <Route path="/about" element={<About />} />
       </Routes>
     </Router>
   );
