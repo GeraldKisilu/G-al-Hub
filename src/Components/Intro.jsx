@@ -2,13 +2,13 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 import logo from "../Components/Assets/Goalhublogo.png";
-import footballImg from "../Components/Assets/football.jpg";
+import footballImg from "../Components/Assets/futbol.jpg";
 import basketballImg from "../Components/Assets/basketball.jpg";
 import poolImg from "../Components/Assets/pooltable.jpg";
 import runningImg from "../Components/Assets/running.jpg";
 import stretchingImg from "../Components/Assets/stretching.jpg";
 import pitchImage from "../Components/Assets/pitch.avif";
-import "./Intro.css";
+import "./Intro.css";     
 
 function Intro() {
   const [showIntroduction, setShowIntroduction] = useState(false);
